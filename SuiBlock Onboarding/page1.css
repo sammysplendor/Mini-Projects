@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(./bg\ image.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+.page-section {
+  width: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 6rem;
+}
+
+.icon-circle {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 1.9rem;
+  left: 2.8rem;
+  z-index: 10;
+}
+
+.icon-circle i {
+  font-size: 1rem;
+  color: white;
+}
+
+.logo-container {
+  width: fit-content;
+  height: auto;
+}
+
+.logo img {
+  width: 400px;
+  height: auto;
+}
+
+.message-container {
+  width: fit-content;
+  height: auto;
+}
+
+.message-container p {
+  color: white;
+  font-size: 1.8rem;
+}
+
+.trust-container {
+  width: fit-content;
+  height: auto;
+  position: absolute;
+  bottom: 1.9rem;
+  left: 2.8rem;
+  z-index: 10;
+}
+
+.CTA-buttons-container {
+  width: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  column-gap: 1rem;
+}
+
+#signup {
+  border-radius: 0.9rem;
+  padding: 0.5rem 1.5rem;
+  font-size: medium;
+  font-weight: 550;
+  cursor: pointer;
+}
+
+#login {
+  border-radius: 0.9rem;
+  border: solid white 0.05rem;
+  padding: 0.5rem 2.8rem;
+  font-size: medium;
+  font-weight: 550;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.trust-container h3 {
+  color: white;
+  font-weight: 600;
+  font-size: medium;
+}
+
+.trust-container p {
+  color: white;
+  font-weight: 0.2rem;
+  font-size: 0.5rem;
+}

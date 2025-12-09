@@ -1,0 +1,191 @@
+/* Page 2 styling */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url(./bg\ image.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  font-family: "inter", sans-serif;
+}
+
+a {
+  font-size: 1.6rem;
+  display: inline-block;
+}
+
+p {
+  font-size: 2rem;
+}
+
+section {
+  flex: 1.5;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 120px;
+}
+
+.icon-circle {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 1.9rem;
+  left: 2.8rem;
+  z-index: 10;
+}
+
+.icon-circle i {
+  font-size: 1rem;
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 120px;
+}
+
+.logo img {
+  width: 200px;
+  height: auto;
+}
+
+.section-footer {
+  margin-top: 14rem;
+}
+
+aside {
+  flex: 1;
+  display: flex;
+  background-color: white;
+  padding: 30px;
+  border-radius: 2rem 0 0 2rem;
+}
+
+.aside-content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label,
+input {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+  font-size: 1.6rem;
+}
+
+/* Labels on top */
+
+/* Text boxes */
+input {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.7rem;
+  margin-bottom: 2rem;
+}
+
+/* Primary CTA button style */
+#continue-btn {
+  width: 100%;
+  border-radius: 1rem;
+  border: none;
+  padding: 0.8rem;
+  background: linear-gradient(to right, #00e7ff, #7b3fe4);
+  color: black;
+  font-size: medium;
+  cursor: pointer;
+}
+
+/* Form footer styles */
+
+ul {
+  list-style: none;
+}
+
+.alt-signup-btn {
+  text-decoration: none;
+  border: 1px solid #000;
+  padding: 10px 30px;
+  border-radius: 2rem;
+  color: #000;
+}
+
+.signup-alternative {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+#signup-alt {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.signup-alt-options {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.have-account p {
+  font-size: 1.2rem;
+}
+
+.have-account a {
+  font-size: 1.2rem;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #838282;
+}
+
+.divider:not(:empty)::before {
+  margin-right: 0.5rem;
+}
+
+.divider:not(:empty)::after {
+  margin-left: 0.5rem;
+}
+
+.icon {
+  width: 18px;
+}

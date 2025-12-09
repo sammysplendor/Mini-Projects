@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SuiBlock</title>
+    <link rel="stylesheet" href="./page2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section>
+      <header>
+        <div class="icon-circle">
+          <i class="fa-solid fa-arrow-left"></i>
+        </div>
+      </header>
+
+      <main>
+        <div class="logo">
+          <img src="./SuiBlock Logo.png" alt="logo" width="100" />
+        </div>
+        <div class="message-container">
+          <p>Create Your Account</p>
+        </div>
+      </main>
+
+      <!-- Progress bar goes here -->
+      <footer class="section-footer">
+        <div class="progess-number">
+          <p>1/4</p>
+        </div>
+        <div class="progress-container">
+          <div class="progress-bar"></div>
+        </div>
+      </footer>
+    </section>
+
+    <!-- Form goes here -->
+    <aside>
+      <div class="aside-content">
+        <div class="signup-form">
+          <form action="/submit" method="post">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" required />
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required />
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required />
+
+            <label for="confirm-password">Confirm Password</label>
+            <input
+              type="password"
+              name="confirm-password"
+              id="confirm-password"
+              required
+            />
+
+            <button
+              type="button"
+              id="continue-btn"
+              onclick="window.location.href=''"
+            >
+              Continue
+            </button>
+          </form>
+        </div>
+
+        <p class="divider">OR</p>
+
+        <footer class="signup-alternative">
+          <div id="signup-alt">
+            <p>Sign Up With</p>
+            <ul class="signup-alt-options">
+              <li>
+                <a
+                  href=""
+                  title="Sign up with Google"
+                  target="_blank"
+                  class="alt-signup-btn"
+                >
+                  <img
+                    class="icon"
+                    src="./google-icon-svgrepo-com.svg"
+                    alt="google logo"
+                  />
+                  Google</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  title="Sign up with Apple"
+                  target="_blank"
+                  class="alt-signup-btn"
+                >
+                  <img
+                    class="icon"
+                    src="./apple-logo-svgrepo-com.svg"
+                    alt="apple logo"
+                  />
+                  Apple</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="have-account">
+            <p>Already have an account? <a href="">Log In</a></p>
+          </div>
+        </footer>
+      </div>
+    </aside>
+  </body>
+</html>

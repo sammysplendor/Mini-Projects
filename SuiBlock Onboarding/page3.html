@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>SuiBlock</title>
+  </head>
+  <body>
+    <section>
+      <div class="icon-circle">
+        <i class="fa-solid fa-arrow-left"></i>
+      </div>
+
+      <main>
+        <div class="display-area">
+          <img
+            class="suiblock-logo"
+            src="./SuiBlock Logo.png"
+            alt="suiblock logo"
+          />
+
+          <p>Create Your Account</p>
+
+          <footer class="main-footer">
+            <p class="progess-number">2/4</p>
+            <progress class="progress-bar" value="2" max="4">2</progress>
+          </footer>
+        </div>
+      </main>
+    </section>
+
+    <!-- Form and Action goes here -->
+    <aside>
+      <h4>Verify Your Email</h4>
+      <br />
+      <br />
+      <p>We sent a code to your email. Enter it below.</p>
+
+      <form action="submit" method="post">
+        <div class="code-container">
+          <input type="password" maxlength="1" required />
+          <input type="password" maxlength="1" required />
+          <input type="password" maxlength="1" required />
+          <input type="password" maxlength="1" required />
+        </div>
+
+        <button
+          type="button"
+          id="verify-email-btn"
+          Onclick="window.location.href=''"
+        >
+          Verify Email
+        </button>
+      </form>
+
+      <div class="links">
+        <ul>
+          <li><a href="">Change Email</a></li>
+          <li><a href="">Resend Code</a></li>
+        </ul>
+      </div>
+    </aside>
+  </body>
+</html>

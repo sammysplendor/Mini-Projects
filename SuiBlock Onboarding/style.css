@@ -1,0 +1,168 @@
+/* -------------- GLOBAL STYLES -------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url(./bg\ image.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: none;
+  height: 100vh;
+  font-family: "inter";
+  display: flex;
+}
+
+a {
+  font-size: 1.6rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 3.2rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+ul a {
+  font-size: 1.2rem;
+}
+
+/* ----------------- COMPONENTS ----------------- */
+
+button {
+  width: 100%;
+  padding: 1.5rem 0;
+  border-radius: 1rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #00e7ff, #7b3fe4);
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(to right, #29c3d4, #6538b4);
+  border: 2px solid linear-gradient(to right, #00e7ff, #7b3fe4);
+  box-shadow: 0px 3px 8px #4e4d4d;
+}
+
+.suiblock-logo {
+  width: 200px;
+  height: auto;
+}
+
+progress {
+  border-radius: 10px;
+  width: 300px;
+  overflow: hidden;
+}
+
+progress::-webkit-progress-value {
+  border-radius: 10px;
+  background-color: #0d6efd;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #e4e0e0;
+}
+
+/* ----------------- DISPLAY SECTION ----------------- */
+
+.icon-circle {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 1.9rem;
+  left: 2.8rem;
+  z-index: 10;
+}
+
+.icon-circle i {
+  font-size: 1.2rem;
+  color: white;
+}
+
+section {
+  display: flex;
+  flex: 1.5;
+  justify-content: center;
+}
+
+.display-area {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  row-gap: 120px;
+  margin-top: 150px;
+  align-items: center;
+}
+
+.main-footer {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ----------------- ASIDE ----------------- */
+
+aside {
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
+  background-color: white;
+  flex: 1;
+  padding: 6rem 6rem 0;
+  border-radius: 2rem 0 0 2rem;
+}
+
+input {
+  width: 70px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  font-size: 2.5rem;
+  text-align: center;
+  box-shadow: 2px 2px 8px #4e4d4d, inset 2px 2px 5px #797676;
+}
+
+.code-container {
+  display: flex;
+  gap: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  margin-top: 100px;
+}
