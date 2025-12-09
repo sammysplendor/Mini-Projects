@@ -1,0 +1,104 @@
+/* ---------- GLOBAL STYLES ---------- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "geist";
+  font-size: 1.8rem;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+p {
+  text-align: center;
+}
+
+/* ---------- CARD STYLES ---------- */
+
+.main-container {
+  background: #e9e8f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 3rem;
+  width: 60%;
+  border-radius: 2rem;
+  box-shadow: -3px 3px 8px #555454;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 90%;
+  align-items: center;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.input-container {
+  width: 100%;
+  text-align: center;
+}
+
+input {
+  padding: 1.5rem;
+  border-radius: 2rem;
+  border: 1px solid #555454;
+  width: 60%;
+}
+
+#get-weather-btn {
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  text-wrap: wrap;
+  cursor: pointer;
+  border: 2px solid skyblue;
+  background: skyblue;
+  transition: all 0.3s ease-out;
+}
+
+#get-weather-btn:hover {
+  border: 2px solid #37aad8;
+  background: #37aad8;
+  transform: translateY(-2px);
+}
+
+#clear-btn {
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  text-wrap: wrap;
+  border: 1.5px solid #555454;
+  cursor: pointer;
+  background: rgb(216, 228, 233);
+  transition: all 0.3s ease-out;
+}
+
+#clear-btn:hover {
+  background: #171717;
+  color: #ebf1f1;
+  transform: translateY(-2px);
+}
