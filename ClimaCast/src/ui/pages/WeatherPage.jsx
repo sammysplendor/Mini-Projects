@@ -8,11 +8,13 @@ import {
 } from "../../services/weatherApi";
 import { useEffect, useState } from "react";
 import DailyForecastCard from "../DailyForecastCard";
+import HourlyForecast from "../HourlyForecast";
 
 const WeatherPage = () => {
   const [searchInput, setSearchInput] = useState("");
   const [showWeather, setShowWeather] = useState(null);
   const [forecastList, setForecastList] = useState([]);
+  const [hourlyList, setHourlyList] = useState([]);
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -27,6 +29,10 @@ const WeatherPage = () => {
           console.log(forecastData);
 
           setShowWeather(currentData);
+
+          const hourly = forecastData.list.slice(0, 6);
+          setHourlyList(hourly);
+
           setForecastList(
             forecastData.list.filter((data) =>
               data.dt_txt.includes("09:00:00"),
@@ -118,31 +124,55 @@ const WeatherPage = () => {
         <main>
           {showWeather && (
             <div className="weatherDisplay">
-              <section className="currentWeather">
-                <div className="city_and_date">
-                  <h2>
-                    {showWeather.name}, {showWeather.sys.country}
-                  </h2>
-                  <p>{currentDate}</p>
+              <div className="mainWeatherSections">
+                <section className="currentWeather">
+                  <div className="city_and_date">
+                    <h2>
+                      {showWeather.name}, {showWeather.sys.country}
+                    </h2>
+                    <p>{currentDate}</p>
+                  </div>
+
+                  <h1>{Math.round(showWeather.main.temp)}°C</h1>
+
+                  <div className="weatherDescription">
+                    <img
+                      src={weatherIcon}
+                      alt={showWeather.weather[0].description}
+                    />
+
+                    <h4>{showWeather.weather[0].description}</h4>
+                  </div>
+                </section>
+
+                <section className="forecastData">
+                  {forecastList.map((day) => (
+                    <DailyForecastCard key={day.dt} forecastData={day} />
+                  ))}
+                </section>
+              </div>
+
+              <aside>
+                <div className="heading">
+                  <h4>Hourly Forecast</h4>
+
+                  <button>
+                    <select name="days" id="day-select">
+                      <option value=""></option>
+                      <option value=""></option>
+                      <option value=""></option>
+                      <option value=""></option>
+                      <option value=""></option>
+                    </select>
+                  </button>
                 </div>
 
-                <h1>{Math.round(showWeather.main.temp)}°C</h1>
-
-                <div className="weatherDescription">
-                  <img
-                    src={weatherIcon}
-                    alt={showWeather.weather[0].description}
-                  />
-
-                  <h4>{showWeather.weather[0].description}</h4>
+                <div className="hourlyCardsContainer">
+                  {hourlyList.map((time) => (
+                    <HourlyForecast key={time.dt} forecastData={time} />
+                  ))}
                 </div>
-              </section>
-
-              <section className="forecastData">
-                {forecastList.map((day) => (
-                  <DailyForecastCard key={day.dt} forecastData={day} />
-                ))}
-              </section>
+              </aside>
             </div>
           )}
         </main>

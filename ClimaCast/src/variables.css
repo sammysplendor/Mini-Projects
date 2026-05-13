@@ -6,6 +6,7 @@
   /* --- Backgrounds & Surfaces --- */
   --bg-app: #040424;
   --surface-card: #36363d;
+  --surface-card-top: #47474d;
 
   /* --- Typography --- */
   --text-main: #fdfdfd; /* Primary headings */

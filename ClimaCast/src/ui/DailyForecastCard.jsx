@@ -1,4 +1,4 @@
-import "./DailyForecastCard.css";
+import "./ForecastCard.css";
 
 const DailyForecastCard = ({ forecastData }) => {
   const date = forecastData?.dt_txt;
