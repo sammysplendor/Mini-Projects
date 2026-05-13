@@ -1,0 +1,67 @@
+/* ====== GLOBAL STYLES ====== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* (10px / 16px) x 100 = 62.5% */
+}
+
+body {
+  background: var(--bg-app);
+  margin-inline: 7rem;
+  font-family: "Poppins";
+}
+
+h1 {
+  font-size: 9rem;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+}
+
+p {
+  font-size: 1.6rem;
+  color: var(--text-secondary);
+}
+
+input {
+  outline: none;
+  border: none;
+  width: 100%;
+  background: none;
+  font-family: inherit;
+  color: var(--text-main);
+}
+
+input::placeholder {
+  font-style: italic;
+}
+
+button {
+  border: none;
+  padding: 1.5rem 3rem;
+  font-family: inherit;
+  font-weight: 500;
+  border-radius: 1rem;
+  cursor: pointer;
+}

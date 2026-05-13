@@ -1,0 +1,47 @@
+:root {
+  /* --- Primary Colors --- */
+  --color-primary: #3530b1; /* Buttons */
+  --color-primary-hover: #302ad6; /* Deepened Blue for Hover States */
+
+  /* --- Backgrounds & Surfaces --- */
+  --bg-app: #040424;
+  --surface-card: #36363d;
+
+  /* --- Typography --- */
+  --text-main: #fdfdfd; /* Primary headings */
+  --text-secondary: #d4d4d4; /* Labels and subtext */
+  --text-on-primary: #ffffff; /* White text for buttons */
+  --text-on-white: #171717;
+
+  /* --- Accents & Indicators --- */
+  --color-border: #d2d7dd; /* Subtle borders for input fields */
+  --color-success: #10b981; /* Emerald for positive changes */
+  --color-warning: #f59e0b; /* Amber for sun-related icons */
+}
+
+/*
+:root {
+  
+  --color-primary: #3b82f6; 
+  --color-primary-hover: #2563eb; 
+
+  
+  --bg-app-gradient: linear-gradient(180deg, #e0f2fe 0%, #f8fafc 100%);
+  --surface-card: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); 
+  --surface-input: #ffffff;
+
+
+  --text-main: #1e293b; 
+  --text-secondary: #64748b; 
+  --text-on-primary: #ffffff; 
+
+  
+  --color-border: #d2d7dd; 
+
+}
+*/
