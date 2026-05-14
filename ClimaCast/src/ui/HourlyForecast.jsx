@@ -11,14 +11,18 @@ const HourlyForecast = ({ forecastData }) => {
   const iconCode = forecastData?.weather[0]?.icon;
   const weatherIcon = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
   return (
-    <div className="hourlyForcast">
+    <div className="hourlyForecast">
       <span>
-        <img src={weatherIcon} alt={forecastData?.weather[0]?.description} />
+        <img
+          className="hourlyWeatherIcon"
+          src={weatherIcon}
+          alt={forecastData?.weather[0]?.description}
+        />
 
         <h4>{hourly}</h4>
       </span>
 
-      <p>{forecastData?.main?.temp}</p>
+      <p>{Math.round(forecastData?.main?.temp)}°C</p>
     </div>
   );
 };

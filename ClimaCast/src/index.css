@@ -63,5 +63,6 @@ button {
   font-family: inherit;
   font-weight: 500;
   border-radius: 1rem;
+  background: none;
   cursor: pointer;
 }

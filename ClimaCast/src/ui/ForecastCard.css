@@ -11,17 +11,26 @@
   font-size: 1.4rem;
 }
 
-.hourlyForcast {
+.hourlyForecast {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding-inline: 1rem;
   border-radius: 1rem;
   background: var(--surface-card-top);
   width: 100%;
 }
 
-.hourlyForcast span {
+.hourlyForecast span {
   display: flex;
+  align-items: center;
   gap: 2rem;
+}
+
+.hourlyForecast p {
+  font-size: 1.4rem;
+}
+
+.hourlyWeatherIcon {
+  width: 7rem;
 }

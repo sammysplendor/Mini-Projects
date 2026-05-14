@@ -145,10 +145,14 @@ const WeatherPage = () => {
                   </div>
                 </section>
 
-                <section className="forecastData">
-                  {forecastList.map((day) => (
-                    <DailyForecastCard key={day.dt} forecastData={day} />
-                  ))}
+                <section className="forecastDataSection">
+                  <h4>Daily Forecast</h4>
+
+                  <div className="forecastData">
+                    {forecastList.map((day) => (
+                      <DailyForecastCard key={day.dt} forecastData={day} />
+                    ))}
+                  </div>
                 </section>
               </div>
 

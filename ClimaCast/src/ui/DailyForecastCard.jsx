@@ -12,7 +12,11 @@ const DailyForecastCard = ({ forecastData }) => {
     <div className="forecastCard">
       <h4>{dayName}</h4>
 
-      <img src={weatherIcon} alt={forecastData?.weather[0]?.description} />
+      <img
+        className="dailyWeatherIcon"
+        src={weatherIcon}
+        alt={forecastData?.weather[0]?.description}
+      />
 
       <span>
         <small>{forecastData?.weather[0]?.description}</small>{" "}
