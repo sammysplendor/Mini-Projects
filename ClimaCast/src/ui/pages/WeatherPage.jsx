@@ -15,6 +15,7 @@ const WeatherPage = () => {
   const [showWeather, setShowWeather] = useState(null);
   const [forecastList, setForecastList] = useState([]);
   const [hourlyList, setHourlyList] = useState([]);
+  const [masterList, setMasterList] = useState([]);
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -29,6 +30,7 @@ const WeatherPage = () => {
           console.log(forecastData);
 
           setShowWeather(currentData);
+          setMasterList(forecastData.list);
 
           const hourly = forecastData.list.slice(0, 6);
           setHourlyList(hourly);
@@ -81,6 +83,30 @@ const WeatherPage = () => {
   };
 
   console.log("Current Forecast List:", forecastList);
+
+  const uniqueDays = [
+    ...new Set(
+      masterList.map((item) =>
+        new Date(item.dt * 1000).toLocaleDateString("en-US", {
+          weekday: "long",
+        }),
+      ),
+    ),
+  ];
+
+  const handleDayChange = (e) => {
+    const selectedDay = e.target.value;
+    if (!selectedDay) return;
+
+    const filteredHours = masterList.filter((item) => {
+      const dayName = new Date(item.dt * 1000).toLocaleDateString("en-US", {
+        weekday: "long",
+      });
+      return dayName.toLowerCase() === selectedDay.toLowerCase();
+    });
+
+    setHourlyList(filteredHours);
+  };
 
   return (
     <div className="pageContainer">
@@ -160,13 +186,19 @@ const WeatherPage = () => {
                 <div className="heading">
                   <h4>Hourly Forecast</h4>
 
-                  <button>
-                    <select name="days" id="day-select">
-                      <option value=""></option>
-                      <option value=""></option>
-                      <option value=""></option>
-                      <option value=""></option>
-                      <option value=""></option>
+                  <button className="selectBtn">
+                    <select
+                      name="days"
+                      id="day-select"
+                      onChange={handleDayChange}
+                    >
+                      <option value="">Select day</option>
+
+                      {uniqueDays.map((day, index) => (
+                        <option value={day} key={index}>
+                          {day}
+                        </option>
+                      ))}
                     </select>
                   </button>
                 </div>
