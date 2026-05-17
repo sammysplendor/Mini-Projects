@@ -13,6 +13,7 @@ import HourlyForecast from "../HourlyForecast";
 const WeatherPage = () => {
   const [searchInput, setSearchInput] = useState("");
   const [showWeather, setShowWeather] = useState(null);
+  const [localWeather, setLocalWeather] = useState(null);
   const [forecastList, setForecastList] = useState([]);
   const [hourlyList, setHourlyList] = useState([]);
   const [masterList, setMasterList] = useState([]);
@@ -27,9 +28,9 @@ const WeatherPage = () => {
           const currentData = await getWeatherByCoords(lat, lon);
           const forecastData = await getForecastByCoords(lat, lon);
           console.log(currentData);
-          console.log(forecastData);
 
           setShowWeather(currentData);
+          setLocalWeather(currentData);
           setMasterList(forecastData.list);
 
           const hourly = forecastData.list.slice(0, 6);
@@ -63,8 +64,6 @@ const WeatherPage = () => {
     try {
       const weatherData = await getWeatherBycity(searchInput);
       const forecastData = await getDailyForecast(searchInput);
-      console.log(weatherData);
-      console.log(forecastData);
 
       setShowWeather(weatherData);
 
@@ -78,11 +77,12 @@ const WeatherPage = () => {
   };
 
   const handleClear = () => {
-    setShowWeather(null);
     setSearchInput("");
-  };
 
-  console.log("Current Forecast List:", forecastList);
+    if (localWeather) {
+      setShowWeather(localWeather);
+    }
+  };
 
   const uniqueDays = [
     ...new Set(
